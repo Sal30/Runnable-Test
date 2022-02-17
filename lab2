@@ -1,0 +1,11 @@
+range IDs = 0..1
+Seat = (reserve -> Booked|query -> Seat),
+Booked = (reserve -> ERROR|query->Booked).
+||Seats = ({seat[IDs]}:Seat).
+
+
+Terminal = (choose[i:0..1] -> seat[IDs] -> Seata),
+Seata = (query -> Terminal | query -> reserve -> Booked).
+
+||Terminals = (a:Terminal||b:Terminal||{a,b}::Seat).
+

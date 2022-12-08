@@ -1,4 +1,3 @@
 # imaginery-revolution
 
-
-# A simple model to demonstrate concurrency
+A simple model to demonstrate concurrency
